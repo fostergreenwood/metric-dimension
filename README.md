@@ -1,12 +1,26 @@
 # Metric Dimension
 
-This repository contains code for checking whether a subset of vertices resolves a graph.
+This repository contains code that accompanies the preprint 
+
+[insert bib]
+
+In particular, the code can be used to verify examples of resolving sets for generalized Hamming graphs $HG(n_1,n_2,n_3;3)$.
 
 ## Background
 
-### Metric dimension
+### The puzzle
 
-### Graphs of interest
+We begin with the puzzle from the introduction of the article:
+
+> Consider an $m\times n$ chessboard with some cells occupied by **landmarks**. A landmark in cell $(i,j)$ **sees** all other cells that are in row $i$ or column $j$. Is it possible to place landmarks on the board so that each unoccupied cell is seen by a different (possibly empty) set of landmarks? What is the minimum number of landmarks required? What if the puzzle is played in higher dimensions on an $n_1\times \cdots\times n_r$ board, where a landmark  sees all other cells that share at least one coordinate with the landmark's cell?
+
+### Exploring the puzzle with Sage
+
+The code in this repository is for exploring possible solutions to the puzzle on a $3$-dimensional board. The set of cells of an $n_1\times n_2\times n_3$ board is the set $V$ consisting of all tuples $(a_1,a_2,a_3)$ with $1\leq a_i\leq n_i$. A possible solution, or placement of landmarks, is denoted $W\subseteq V$. If every unoccupied cell is seen by a different set of landmarks, we say that $W$ **resolves** the board.
+
+### Mathematics of the puzzle
+
+What does all this have to do with metric dimension? When the $n_i$'s are all greater than or equal to $3$, resolving the board is equivalent to resolving a generalized Hamming graph. The cells of the board correspond to vertices of the graph. The minimum size of a resolving set is the metric dimension of the graph. We refer the reader to the article for the relevant definitions and a detailed explanation of the relationship between the puzzle, metric dimension, and generalized Hamming graphs.
 
 ## Running the code
 
