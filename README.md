@@ -113,6 +113,7 @@ Wmatrix=[[1,2,3,10,0,0,0],[4,5,6,1,2,3,0],[7,8,9,4,5,6,0],[10,0,0,7,8,9,0],[0,0,
 W=LatinRecToLandmarks(Wmatrix)
 print("matrix form:")
 print(matrix(Wmatrix))
+print("number of landmarks:",len(W))
 print("unresolved classes:")
 UnresolvedClasses(W,5,7,11)
 ```
@@ -130,10 +131,10 @@ unresolved classes:
 ```
 Thus $W$ is a size $21$ resolving set for the $5\times 7\times 11$ board. 
 
-Already, this example is large enough for the code to run noticeably slower. If we want a faster test, we can run `IsResolvingQ(W,5,7,11)`, which returns `true` in a little less time than it takes to sort into classes. 
+Already, this example is large enough for the code to run noticeably slower. If we want a faster test, we can run `IsResolvingQ(W,5,7,11)`, which returns `True` in a little less time than it takes to sort into classes. 
 
 #### A nonresolving set
-If we run `IsResolvingQ` on a set that is not resolving, the function returns `false` as soon as it encounters an unresolved pair, rather than completely sorting all the vertices into classes. For example, if we remove the landmark `[1,2,2]` and evaluate
+If we run `IsResolvingQ` on a set that is not resolving, the function returns `False` as soon as it encounters an unresolved pair, rather than completely sorting all the vertices into classes. For example, if we remove the landmark `[1,2,2]` and evaluate
 ```
 Wmatrix=[[1,0,3,10,0,0,0],[4,5,6,1,2,3,0],[7,8,9,4,5,6,0],[10,0,0,7,8,9,0],[0,0,0,0,0,0,11]]
 W=LatinRecToLandmarks(Wmatrix)
