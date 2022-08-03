@@ -2,7 +2,7 @@
 
 This repository contains code that accompanies the preprint:
 
-Briana Foster-Greenwood and Christine Uhl. Metric dimension of a diagonal family of generalized Hamming graphs, 2022. URL: [arXiv link coming soon]
+Briana Foster-Greenwood and Christine Uhl. Metric dimension of a diagonal family of generalized Hamming graphs, *Submitted* (2022). URL: [arXiv:2208.01519](https://arxiv.org/abs/2208.01519)
 
 In particular, the code can be used to verify examples of resolving sets for generalized Hamming graphs $HG(n_1,n_2,n_3;3)$.
 
@@ -10,7 +10,7 @@ In particular, the code can be used to verify examples of resolving sets for gen
 
 ### The puzzle
 
-We begin with the puzzle from the introduction of the article:
+We begin with the puzzle from the introduction of [arXiv:2208.01519](https://arxiv.org/abs/2208.01519):
 
 > Consider an $m\times n$ chessboard with some cells occupied by **landmarks**. A landmark in cell $(i,j)$ **sees** all other cells that are in row $i$ or column $j$. Is it possible to place landmarks on the board so that each unoccupied cell is seen by a different (possibly empty) set of landmarks? What is the minimum number of landmarks required? What if the puzzle is played in higher dimensions on an $n_1\times \cdots\times n_r$ board, where a landmark  sees all other cells that share at least one coordinate with the landmark's cell?
 
@@ -20,7 +20,7 @@ The code in this repository is for exploring possible solutions to the puzzle on
 
 ### Mathematics of the puzzle
 
-What does all this have to do with metric dimension? When the $n_i$'s are all greater than or equal to $3$, resolving the board is equivalent to resolving a generalized Hamming graph. The cells of the board correspond to vertices of the graph. The minimum size of a resolving set is the metric dimension of the graph. We refer the reader to [arXiv link] for definitions and a detailed explanation of the relationship between the puzzle, metric dimension, and generalized Hamming graphs.
+What does all this have to do with metric dimension? When the $n_i$'s are all greater than or equal to $3$, resolving the board is equivalent to resolving a generalized Hamming graph. The cells of the board correspond to vertices of the graph. The minimum size of a resolving set is the metric dimension of the graph. We refer the reader to [arXiv:2208.01519](https://arxiv.org/abs/2208.01519) for definitions and a detailed explanation of the relationship between the puzzle, metric dimension, and generalized Hamming graphs.
 
 ## Running the code
 
@@ -101,7 +101,7 @@ matrix form:
 [0 0 0 0 5 6]
 list form: [[1, 2, 1], [2, 1, 1], [2, 2, 2], [3, 3, 2], [3, 4, 3], [4, 3, 3], [4, 4, 4], [5, 5, 4], [5, 6, 5], [6, 5, 5], [6, 6, 6]]
 ```
-Now we check for unresolved classes by evaluating `UnresolvedClasses(W,6,6,6)` which yields an output of `[]` indicating that $W$ is a resolving set. In fact, $W$ is a *minimum* resolving set by the lower bound in Theorem 2.2 of [arXiv link].
+Now we check for unresolved classes by evaluating `UnresolvedClasses(W,6,6,6)` which yields an output of `[]` indicating that $W$ is a resolving set. In fact, $W$ is a *minimum* resolving set by the lower bound in Theorem 2.2 of [arXiv:2208.01519](https://arxiv.org/abs/2208.01519).
 
 ### Example 3
 The dimensions do not all have to be the same. For example, consider a $5\times 7\times 11$ board whose cells are represented by tuples $(i,j,k)$ with $1\leq i\leq 5$, $1\leq j\leq 7$, and $1\leq k\leq 11$. 
