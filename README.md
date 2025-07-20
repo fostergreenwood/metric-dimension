@@ -50,7 +50,7 @@ The code is written in Sage. The simplest way to run it is to copy-paste into [S
 
 ## Examples
 
-The following examples illustrate usage of the functions in `resolve3d.sage`. Examples 4 and 5 relate to the Middle Cone Family paper.
+The first three examples illustrate how to use the functions in `resolve3d.sage` and accompany the article [https://doi.org/10.37236/12399](https://doi.org/10.37236/12399).
 
 ### Example 1
 
@@ -164,7 +164,7 @@ False
 so this choice of $W$ is not a resolving set.
 
 ## More Examples
-The following examples accompany paper 2.
+The next three examples accompany paper 2.
 
 ### Example 4
 To verify the landmark graph shown in Figure 1 of paper 2 is a resolving set for the graph $K(4,5,7)=K_4\times K_5\times K_7$, we run
