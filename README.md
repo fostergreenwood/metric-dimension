@@ -162,3 +162,33 @@ found unresolved pair: [2, 1, 1] and [2, 1, 2]
 False
 ```
 so this choice of $W$ is not a resolving set.
+
+## More Examples
+The following examples accompany paper 2.
+
+### Example 4
+To verify the landmark graph shown in Figure 1 of paper 2 is a resolving set for the graph $K(4,5,7)=K_4\times K_5\times K_7$, we run
+```
+W=[[1,1,1],[1,2,5],[1,3,2],[1,4,6],[2,1,3],[2,2,1],[2,3,4],[2,4,2],[3,1,5],[3,2,3],[3,3,6],[3,4,4],[4,5,7]]
+print("resolving?")
+IsResolvingQ(W,4,5,7)
+```
+and get an output of `True`.
+
+### Example 5
+To verify the landmark graph shown in Figure 2 of paper 2 is a resolving set for the graph $K(3,3,8)=K_3\times K_3\times K_8$, we run
+ ```
+W=[[1,1,1],[1,3,1],[1,1,2],[1,2,2],[1,2,3],[1,3,3],[2,1,4],[2,2,4],[2,2,5],[2,3,5],[3,1,6],[3,2,6],[3,2,7],[3,3,7],[3,1,8],[3,3,8]]
+print("resolving?")
+IsResolvingQ(W,3,3,8)
+```
+and get an output of `True`. This shows that not every resolving set needs to satisfy the conditions of a basic landmark system (Definition 2.1 of paper 2). 
+
+### Example 6
+As remarked in the last section of paper 2, even though $(5,6,6)$ is not in the middle cone, we can apply Construction 3.1 of paper 2 and add a loop to resolve $K(6,7,7)=K_6\times K_7\times K_7$ in $13$ landmarks. To verify, we run
+```
+W=[[1,1,1],[1,2,2],[2,3,3],[3,1,4],[4,2,5],[5,3,6],[2,4,1],[2,5,2],[3,6,3],[4,4,4],[5,5,5],[1,6,6],[6,7,7]]
+print("resolving?")
+IsResolvingQ(W,6,7,7)
+```
+and get an output of `True`.
