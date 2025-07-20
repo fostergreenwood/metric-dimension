@@ -1,7 +1,8 @@
 ################################################################################
 # resolve3d.sage
 # Briana Foster-Greenwood
-# Last update: 29 July 2022
+# Last code update: 29 July 2022
+# Last examples update: 20 July 2025
 #
 # This Sage code is for testing whether a set of vertices resolves the
 # generalized Hamming graph HG(n1,n2,n3;3) for n_i\geq 3.
@@ -171,3 +172,18 @@ def IsResolvingQ(W,n1,n2,n3):
 #print(IsResolvingQ(W,5,7,11))
 #print("unresolved classes:")
 #UnresolvedClasses(W,5,7,11)
+#---------------------------------- Example 4 ----------------------------------
+#W=[[1,1,1],[1,2,5],[1,3,2],[1,4,6],[2,1,3],[2,2,1],[2,3,4],[2,4,2],[3,1,5],[3,2,3],[3,3,6],[3,4,4],[4,5,7]]
+#print("W=",W)
+#print("resolving?")
+#print(IsResolvingQ(W,4,5,7))
+#---------------------------------- Example 5 ----------------------------------
+#W=[[1,1,1],[1,3,1],[1,1,2],[1,2,2],[1,2,3],[1,3,3],[2,1,4],[2,2,4],[2,2,5],[2,3,5],[3,1,6],[3,2,6],[3,2,7],[3,3,7],[3,1,8],[3,3,8]]
+#print("W=",W)
+#print("resolving?")
+#print(IsResolvingQ(W,3,3,8))
+#---------------------------------- Example 6 ----------------------------------
+#W=[[1,1,1],[1,2,2],[2,3,3],[3,1,4],[4,2,5],[5,3,6],[2,4,1],[2,5,2],[3,6,3],[4,4,4],[5,5,5],[1,6,6],[6,7,7]]
+#print("W=",W)
+#print("resolving?")
+#print(IsResolvingQ(W,6,7,7))
